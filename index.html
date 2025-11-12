@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serick - Site Oficial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: white;
+      background: url('serick-scena-noua.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Efect de lumini calde peste fundal */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg,
+        rgba(255, 0, 0, 0.25),
+        rgba(255, 165, 0, 0.25),
+        rgba(255, 255, 0, 0.25),
+        rgba(255, 69, 0, 0.25));
+      background-size: 400% 400%;
+      animation: moveLights 12s ease infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveLights {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, .social-buttons {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      max-width: 700px;
+      line-height: 1.4;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Culorile butoanelor */
+    .whatsapp-btn { background: #25D366; }
+    .instagram-btn { background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+    .tiktok-btn { background: #000000; }
+    .youtube-btn { background: #ff0000; }
+
+    /* Pulsare ușoară la hover */
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,255,255,0.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.4); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,255,255,0.4); }
+    }
+
+    .btn:hover {
+      animation: pulse 0.8s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eu sunt Serick și sunt un cântăreț foarte bun și mă duc la concursuri.</h1>
+
+  <div class="social-buttons">
+    <a href="https://wa.me/40774929280" class="btn whatsapp-btn" target="_blank">💬 WhatsApp</a>
+    <a href="https://instagram.com/serick.official" class="btn instagram-btn" target="_blank">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@serick.official" class="btn tiktok-btn" target="_blank">🎵 TikTok</a>
+    <a href="https://www.youtube.com/@serick.official" class="btn youtube-btn" target="_blank">🔴 YouTube</a>
+  </div>
+</body>
+</html>
+
+<!-- Player YouTube -->
+<div class="music-section" style="margin-top:40px; position:relative; z-index:1;">
+  <h2 style="color:white; font-size:24px;">🎵 Ascultă muzica mea</h2>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/watch?v=EBV-lVeewUI&list=RDEBV-lVeewUI&start_radio=1
+"
+    title="Serick - Muzica mea"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
